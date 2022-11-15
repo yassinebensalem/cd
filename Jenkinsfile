@@ -6,7 +6,7 @@ pipeline {
 	                script{
 	                    checkout([$class: 'GitSCM', branches: [[name: '*/master']],
 	                    userRemoteConfigs:[[
-	                        credentialsId: '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', 
+	                        credentialsId: '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', 
 	                           url: 'https://github.com/nourelhoudafdhila/projectcd.git']]])
 	                }
 	            }
@@ -37,6 +37,13 @@ pipeline {
             steps{
                 script{
                     sh "ansible-playbook Ansible/docker.yml -i Ansible/inventory/host.yml"
+                }
+            }
+        }
+        stage('docker-registry'){
+            steps{
+                script{
+                    sh "ansible-playbook Ansible/docker-registry.yml -i Ansible/inventory/host.yml"
                 }
             }
         }
