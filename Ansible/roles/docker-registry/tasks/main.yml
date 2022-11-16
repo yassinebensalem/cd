@@ -10,6 +10,6 @@
 - name: docker push
   docker_image:
     name: appfront:latest
-    repository: nourfdhila123/cdnour
+    repository: yassinedockeer/cd
     push: yes
     source: local 
