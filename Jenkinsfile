@@ -11,13 +11,7 @@ pipeline {
 	                }
 	            }
 	        }
-	        stage('npm install'){
-	            steps{
-	                script{
-	                    sh "npm install --force"
-	                }
-	            }
-	        }
+	        
 	
 	        stage('python test'){
 	            steps{
