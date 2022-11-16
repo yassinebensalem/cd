@@ -4,8 +4,8 @@
 - name: login
   docker_login:
     #email: "nourelhouda.fdhila@esprit.tn"
-    username: "nourfdhila123"
-    password: "181jmt3049"
+    username: "yassinedockeer"
+    password: "azeqs.123"
     reauthorize: yes
 - name: docker push
   docker_image:
